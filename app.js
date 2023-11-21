@@ -12,6 +12,8 @@ const userWraps = document.querySelector(".userWraps");
 const dropdown = document.querySelector(".dropdown");
 const alertIcon = document.querySelector(".notifcation");
 const alertDropdown = document.querySelector(".notify");
+const inputCheck = document.querySelectorAll(".inputCheck");
+
 
 checkbox.forEach((check) => {
   check.addEventListener("click", (e) => {
@@ -25,7 +27,7 @@ checkbox.forEach((check) => {
 });
 
 closeTitleBtn.addEventListener("click", () => {
-  planTitle.classList.add("closeTitle");
+  planTitle.classList.add("hide");
   activitiesWrap.classList.add("closedTitle");
 });
 
@@ -48,33 +50,19 @@ alertIcon.addEventListener('click', ()=>{
   alertDropdown.classList.toggle('show')
 })
 
-//   for(let i = 0; i < bigWraps.length; i++){
-//     bigWraps[i].addEventListener('click', ()=>{
 
-//       if( !planContainer[i].classList.contains('show')){
 
-//         planContainer[i].classList.add('show')
-//       } else{
-//         return
-//       }
 
-//     })
-// }
+inputCheck.forEach((item, index) => {
+  item.addEventListener('change', () => {
+      for (let i = 0; i < planContainer.length; i++) {
+          if (i === index) {
+              planContainer[i].classList.toggle('checked', item.checked);
+          } else {
+              planContainer[i].classList.remove('checked');
+          }
+      }
+  });
+});
 
-// for (let i = 0; i < bigWraps.length; i++) {
-//   bigWraps[i].addEventListener("click", () => {
-//     for (let i = 0; i < planContainer.length; i++) {
-//       for (let j = 0; j < planContainer.length; j++) {
-//         if (planContainer[i].classList.contains("show")) {
-//           return;
-//         } else if (
-//           planContainer[i] != planContainer[j] &&
-//           planContainer[i].classList.contains("show")
-//         ) { planContainer[i].classList.remove('show')
-//         } 
 
-//         planContainer[j].classList.add('show')
-//       }
-//     }
-//   });
-// }

@@ -57,6 +57,19 @@ nav .inputWrapper {
   border-radius: 8px;
   border: 1px solid #616161;
   background: #303030;
+  transition: 0.3s;
+}
+
+nav .inputWrapper:hover {
+  border: 1px solid var(--stroke-s-100, #e1e1e1);
+}
+
+nav .inputWrapper:focus {
+  border: 2px solid var(--White, #fff);
+}
+
+nav .inputWrapper:active {
+  border: 2px solid var(--White, #fff);
 }
 
 nav .inputWrapper input {
@@ -108,8 +121,13 @@ nav .action .userWraps {
 }
 
 nav .action .userWraps:hover,
+nav .action .userWraps:active {
+  background: var(--grey-grey-50, #656266);
+}
+
 nav .action .userWraps:focus {
   background: var(--grey-grey-50, #656266);
+  box-shadow: 0px 0px 0px 3px #005bd3, 0px 0px 0px 1px #000;
 }
 
 nav .action .userWraps .user {
@@ -160,9 +178,11 @@ nav .action .userWraps .userInit {
   opacity: 0;
   visibility: none;
   transition: 0.3s;
+  pointer-events: none;
 }
 
 .dropdown.show {
+  pointer-events: all;
   opacity: 1;
   visibility: visible;
   top: 64px;
@@ -327,12 +347,14 @@ nav .action .userWraps .userInit {
   opacity: 0;
   visibility: none;
   transition: 0.3s;
+  pointer-events: none;
 }
 
 .notify.show {
   opacity: 1;
   visibility: visible;
   top: 64px;
+  pointer-events: all;
 }
 
 .notify .notTop {
@@ -363,11 +385,11 @@ nav .action .userWraps .userInit {
 }
 
 .notify svg {
-cursor: pointer;
+  cursor: pointer;
 }
 
 .notify svg:focus {
-  border: 1px solid #005BD3;
+  border: 1px solid #005bd3;
 }
 
 /* ============================= MAIN SECTION==================== */
@@ -384,7 +406,7 @@ main .planTitle {
   margin-inline: auto;
 }
 
-main .planTitle.closeTitle {
+main .planTitle.hide {
   display: none;
 }
 
@@ -426,13 +448,33 @@ main .planTitle .selectAction .selectPlan {
   font-style: normal;
   font-weight: 600;
   line-height: 130%;
+  transition: .3s;
 }
 
-main .planTitle .selectAction .close {
+main .planTitle .selectAction .selectPlan:hover{
+border: 1px solid rgba(0, 0, 0, 0.10);
+background: #F7F7F7;
+box-shadow: 0px -1px 0px 0px #B5B5B5 inset;
+
+}
+
+main .planTitle .selectAction .selectPlan:active{
+background: #F7F7F7;
+box-shadow: 0px 2px 1.5px 0px #E2E2E2 inset;
+  
+}
+
+main .planTitle .selectAction .selectPlan:focus{
+  border: 2px solid var(--states-focused, #005BD3);
+background: #FFF;
+}
+
+main .planTitle .close {
   cursor: pointer;
   border-radius: 10px;
   padding: 8px;
 }
+/* =======================ACTIVITIES WRAP======================= */
 
 .activitiesWrap {
   border-radius: 18px;
@@ -470,9 +512,15 @@ main .planTitle .selectAction .close {
 }
 
 .activities .arrow:hover {
-  border-radius: 6px;
-  transition: 0.3s;
-  background: var(--Background, #f1f1f1);
+  background: var(--states-hover, #F1F1F1);
+}
+
+.activities .arrow:active {
+background: var(--states-pressed, #F0F0F0);
+}
+
+.activities .arrow:focus {
+  border: 2px solid var(--states-focused, #005BD3);
 }
 
 .activities .left h1 {
@@ -514,6 +562,8 @@ main .planTitle .selectAction .close {
   cursor: pointer;
 }
 
+/* =======================PLAN SECTION======================= */
+
 .planWrapper {
   margin-top: 16px;
   margin-inline: 8px;
@@ -542,7 +592,7 @@ main .planTitle .selectAction .close {
   justify-content: space-between;
 }
 
-.planContainer > input[type="radio"]:checked {
+.planContainer.checked {
   background: #f3f3f3;
 }
 
@@ -657,11 +707,16 @@ main .planTitle .selectAction .close {
 }
 
 .details .bottomBtne:hover {
-  background: #e7e7e7;
+  background: #E7E7E7;
 }
 
 .details .bottomBtne:active {
-  background: #323232;
+  background: #E0E0E0;
+}
+
+.details .bottomBtne:focus {
+  border: 2px solid var(--states-focused, #005BD3);
+  background: #FFF;
 }
 
 .details .bottomBtn {
@@ -683,7 +738,17 @@ main .planTitle .selectAction .close {
 }
 
 .details .bottomBtn:hover {
-  background: #333;
+  background: #2a2a2a;
+}
+
+.details .bottomBtn:active {
+  background: #2b2b2b;
+}
+
+.details .bottomBtn:focus {
+  background: #404040;
+  box-shadow: 0px 0px 0px 5px #005bd3, 0px 0px 0px 3px #fff,
+    0px 0px 0px 1.5px #333;
 }
 
 .planContainer .imgWraps {
@@ -745,8 +810,8 @@ main .planTitle .selectAction .close {
     display: none;
   }
 
-  .notify{
-    width: 90%;
+  .notify {
+    width: calc(100% - 32px);
     right: 0;
     left: 50%;
     transform: translateX(-50%);
