@@ -623,6 +623,8 @@ background: var(--states-pressed, #F0F0F0);
   position: relative;
 }
 
+
+
 .checkbox:hover .halfCheck {
   opacity: 1;
   visibility: visible;
@@ -819,6 +821,3 @@ background: var(--states-pressed, #F0F0F0);
   }
 }
 
-
-
-refactor and debug for screen reader users and keyboard users   
