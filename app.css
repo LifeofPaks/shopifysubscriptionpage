@@ -248,6 +248,7 @@ nav .action .userWraps .userInit {
   border-radius: 8px;
   margin-bottom: 4px;
   cursor: pointer;
+  width: 100%;
 }
 
 .dropdown .allStores:focus {
@@ -817,3 +818,7 @@ background: var(--states-pressed, #F0F0F0);
     transform: translateX(-50%);
   }
 }
+
+
+
+refactor and debug for screen reader users and keyboard users   

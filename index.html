@@ -13,7 +13,7 @@
   </head>
   <body>
     <nav>
-      <a href="/">
+      <a href="/" aria-label="Home">
         <div class="logo">
           <svg
             class="dLogo"
@@ -86,7 +86,7 @@
       </a>
 
       <div class="inputWrapper">
-        <button>
+        <button aria-label="Search">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -106,7 +106,7 @@
       </div>
 
       <div class="action">
-        <button class="notifcation">
+        <button class="notifcation" aria-label="Notifications">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -124,94 +124,156 @@
         </button>
 
         <div class="userWraps">
-          <p class="user">Davii Collections</p>
+          <p class="user" aria-label="User">Davii Collections</p>
 
-          <p class="userInit">dc</p>
+          <p class="userInit" aria-label="User Initials">dc</p>
         </div>
       </div>
     </nav>
 
     <!-- USER PROFILE DROP DOWN -->
-    <section class="dropdown">
-        <div class="ddTop">
-            <div class="userProfile">
+    <article class="dropdown" aria-hidden="true">
+      <section class="ddTop">
+        <section class="userProfile" tabindex="0" role="button" aria-label="User Profile Dropdown">
+          <div class="ddLeft">
+            <p class="ddUserInit">DC</p>
+            <p class="ddUsername">Davii Collections</p>
+          </div>
 
-                <div class="ddLeft">
-                    <p class="ddUserInit">
-                        DC
-                    </p>
-                    <p class="ddUsername">
-                        Davii Collections
-                    </p>
-                </div>
-    
-                <svg class="active" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="#303030" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-               
-            </div>
-    
-            <div class="allStores">
-                <svg class="store" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.757 3H7.24302C6.85944 3 6.4971 3.17611 6.26012 3.47772L3.87394 6.51468C3.63169 6.823 3.5 7.20375 3.5 7.59586V8.25C3.5 9.31867 4.10958 10.245 5 10.7001V15.25C5 16.2165 5.7835 17 6.75 17H14.25C15.2165 17 16 16.2165 16 15.25V10.7001C16.8904 10.245 17.5 9.31867 17.5 8.25V7.76879C17.5 7.26465 17.3307 6.77511 17.0192 6.3787L14.7399 3.47772C14.5029 3.17611 14.1406 3 13.757 3ZM13.5 15.5H14.25C14.3881 15.5 14.5 15.3881 14.5 15.25V11C13.712 11 13.0014 10.6686 12.5 10.1375C11.9986 10.6686 11.288 11 10.5 11C9.71199 11 9.00138 10.6686 8.5 10.1375C7.99862 10.6686 7.28801 11 6.5 11V15.25C6.5 15.3881 6.61193 15.5 6.75 15.5H10.5V13C10.5 12.4477 10.9477 12 11.5 12H12.5C13.0523 12 13.5 12.4477 13.5 13V15.5ZM6.5 9.5H6.25C5.55964 9.5 5 8.94036 5 8.25V7.59586C5 7.53985 5.01881 7.48545 5.05342 7.44141L7.36453 4.5H13.6355L15.8397 7.30543C15.9436 7.43757 16 7.60075 16 7.76879V8.25C16 8.94036 15.4404 9.5 14.75 9.5H14.5C13.8096 9.5 13.25 8.94036 13.25 8.25V7.75C13.25 7.33579 12.9142 7 12.5 7C12.0858 7 11.75 7.33579 11.75 7.75V8.25C11.75 8.94036 11.1904 9.5 10.5 9.5C9.80964 9.5 9.25 8.94036 9.25 8.25V7.75C9.25 7.33579 8.91421 7 8.5 7C8.08579 7 7.75 7.33579 7.75 7.75V8.25C7.75 8.94036 7.19036 9.5 6.5 9.5Z" fill="#303030"/>
-                  </svg>
-    
-                  <p class="storeText">All stores</p>
-            </div>
-        </div>
-       
+          <button aria-label="Active">
+            <svg
+              class="active"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+            >
+              <path
+                d="M13.3332 4L5.99984 11.3333L2.6665 8"
+                stroke="#303030"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </section>
 
-        <ul class="midList">
-            <li class="list">Help Center    </li>
-            <li class="list">Changelog</li>
-            <li class="list">Community forums</li>
-            <li class="list">Hire a Shopify Partner</li>
-            <li class="list">Keyboard shortcuts</li>
-        </ul>
+        <section class="allStores" >
+            <button  aria-label="View all stores">
 
-        <div class="action">
-                <p class="ddName">David Micheal</p>
-                <p class="email">davidmicheal@gmail.com</p>
-        </div>
+                <svg
+                class="store"
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="20"
+                viewBox="0 0 21 20"
+                fill="none"
+                >
+                <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13.757 3H7.24302C6.85944 3 6.4971 3.17611 6.26012 3.47772L3.87394 6.51468C3.63169 6.823 3.5 7.20375 3.5 7.59586V8.25C3.5 9.31867 4.10958 10.245 5 10.7001V15.25C5 16.2165 5.7835 17 6.75 17H14.25C15.2165 17 16 16.2165 16 15.25V10.7001C16.8904 10.245 17.5 9.31867 17.5 8.25V7.76879C17.5 7.26465 17.3307 6.77511 17.0192 6.3787L14.7399 3.47772C14.5029 3.17611 14.1406 3 13.757 3ZM13.5 15.5H14.25C14.3881 15.5 14.5 15.3881 14.5 15.25V11C13.712 11 13.0014 10.6686 12.5 10.1375C11.9986 10.6686 11.288 11 10.5 11C9.71199 11 9.00138 10.6686 8.5 10.1375C7.99862 10.6686 7.28801 11 6.5 11V15.25C6.5 15.3881 6.61193 15.5 6.75 15.5H10.5V13C10.5 12.4477 10.9477 12 11.5 12H12.5C13.0523 12 13.5 12.4477 13.5 13V15.5ZM6.5 9.5H6.25C5.55964 9.5 5 8.94036 5 8.25V7.59586C5 7.53985 5.01881 7.48545 5.05342 7.44141L7.36453 4.5H13.6355L15.8397 7.30543C15.9436 7.43757 16 7.60075 16 7.76879V8.25C16 8.94036 15.4404 9.5 14.75 9.5H14.5C13.8096 9.5 13.25 8.94036 13.25 8.25V7.75C13.25 7.33579 12.9142 7 12.5 7C12.0858 7 11.75 7.33579 11.75 7.75V8.25C11.75 8.94036 11.1904 9.5 10.5 9.5C9.80964 9.5 9.25 8.94036 9.25 8.25V7.75C9.25 7.33579 8.91421 7 8.5 7C8.08579 7 7.75 7.33579 7.75 7.75V8.25C7.75 8.94036 7.19036 9.5 6.5 9.5Z"
+                fill="#303030"
+                />
+            </svg>
+        </button>
+        <p class="storeText">All stores</p>
 
-        <p class="list">Manage account</p>
-        <p class="list">Log out</p>
+        </section>
+      </section>
 
+      <ul class="midList">
+        <li class="list"> <a href="#">Help Center</a></li>
+        <li class="list"> <a href="#">Changelog</a></li>
+        <li class="list"> <a href="#">Community forums</a></li>
+        <li class="list"> <a href="#">Hire a Shopify Partner</a></li>
+        <li class="list"> <a href="#">Keyboard shortcuts</a></li>
+      </ul>
 
-    </section>
+      <section class="action">
+        <p class="ddName">David Micheal</p>
+        <p class="email">davidmicheal@gmail.com</p>
+      </section>
+
+      <ul class="midList">
+        <li class="list"> <a href="#">Manage account</a></li>
+      <li class="list"> <a href="#">Log out</a></li>
+      </ul>
+      
+    </article>
 
     <!-- NOTIFICATION DROP DOWN -->
-    <section class="notify">
-        <div class="notTop">
-            <p class="alerts">Alerts</p>
-            <div class="notIcon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M3 6C3 5.58579 3.33579 5.25 3.75 5.25H16.25C16.6642 5.25 17 5.58579 17 6C17 6.41421 16.6642 6.75 16.25 6.75H3.75C3.33579 6.75 3 6.41421 3 6Z" fill="#616161"/>
-                    <path d="M6.75 14C6.75 13.5858 7.08579 13.25 7.5 13.25H12.5C12.9142 13.25 13.25 13.5858 13.25 14C13.25 14.4142 12.9142 14.75 12.5 14.75H7.5C7.08579 14.75 6.75 14.4142 6.75 14Z" fill="#616161"/>
-                    <path d="M5.5 9.25C5.08579 9.25 4.75 9.58579 4.75 10C4.75 10.4142 5.08579 10.75 5.5 10.75H14.5C14.9142 10.75 15.25 10.4142 15.25 10C15.25 9.58579 14.9142 9.25 14.5 9.25H5.5Z" fill="#616161"/>
-                  </svg>
+    <article class="notify" aria-hidden="true">
+      <section class="notTop">
+        <h2 class="alerts">Alerts</h2>
+        <div class="notIcon">
+            <button    type="button"
+            aria-label="Mark as read" >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M3 6C3 5.58579 3.33579 5.25 3.75 5.25H16.25C16.6642 5.25 17 5.58579 17 6C17 6.41421 16.6642 6.75 16.25 6.75H3.75C3.33579 6.75 3 6.41421 3 6Z"
+              fill="#616161"
+            />
+            <path
+              d="M6.75 14C6.75 13.5858 7.08579 13.25 7.5 13.25H12.5C12.9142 13.25 13.25 13.5858 13.25 14C13.25 14.4142 12.9142 14.75 12.5 14.75H7.5C7.08579 14.75 6.75 14.4142 6.75 14Z"
+              fill="#616161"
+            />
+            <path
+              d="M5.5 9.25C5.08579 9.25 4.75 9.58579 4.75 10C4.75 10.4142 5.08579 10.75 5.5 10.75H14.5C14.9142 10.75 15.25 10.4142 15.25 10C15.25 9.58579 14.9142 9.25 14.5 9.25H5.5Z"
+              fill="#616161"
+            />
+          </svg>
+        </button>
 
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M13.2803 9.03033C13.5732 8.73744 13.5732 8.26256 13.2803 7.96967C12.9874 7.67678 12.5126 7.67678 12.2197 7.96967L9.25 10.9393L8.03033 9.71967C7.73744 9.42678 7.26256 9.42678 6.96967 9.71967C6.67678 10.0126 6.67678 10.4874 6.96967 10.7803L8.71967 12.5303C9.01256 12.8232 9.48744 12.8232 9.78033 12.5303L13.2803 9.03033Z" fill="#616161"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10ZM15.5 10C15.5 13.0376 13.0376 15.5 10 15.5C6.96243 15.5 4.5 13.0376 4.5 10C4.5 6.96243 6.96243 4.5 10 4.5C13.0376 4.5 15.5 6.96243 15.5 10Z" fill="#616161"/>
-                  </svg>
-            </div>
+        <button type="button"
+        aria-label="Dismiss">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M13.2803 9.03033C13.5732 8.73744 13.5732 8.26256 13.2803 7.96967C12.9874 7.67678 12.5126 7.67678 12.2197 7.96967L9.25 10.9393L8.03033 9.71967C7.73744 9.42678 7.26256 9.42678 6.96967 9.71967C6.67678 10.0126 6.67678 10.4874 6.96967 10.7803L8.71967 12.5303C9.01256 12.8232 9.48744 12.8232 9.78033 12.5303L13.2803 9.03033Z"
+              fill="#616161"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10ZM15.5 10C15.5 13.0376 13.0376 15.5 10 15.5C6.96243 15.5 4.5 13.0376 4.5 10C4.5 6.96243 6.96243 4.5 10 4.5C13.0376 4.5 15.5 6.96243 15.5 10Z"
+              fill="#616161"
+            />
+          </svg>
+        </button>
         </div>
+      </section>
+
+      <section aria-live="polite">
         <p class="notText">
-            Alerts about your store and account will show here
+          Alerts about your store and account will show here
         </p>
-    </section>
+      </section>
+    </article>
 
     <main>
       <section class="planTitle">
         <div class="titleWraps">
           <p>Extend your trial for $1/month for 3 months on select plans.</p>
-          <button class="selectPlanMobile">Select a plan</button>
+          <button aria-label="Select a plan" class="selectPlanMobile">Select a plan</button>
         </div>
 
         <div class="selectAction">
-          <button class="selectPlan">Select a plan</button>
-          <button class="close">
+          <button aria-label="Select a plan" class="selectPlan">Select a plan</button>
+          <button aria-label="Select a plan" class="close">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -235,9 +297,11 @@
             <p class="text">
               Use this personalized guide to get your store up and running.
             </p>
-            <div class="progress">
+            <div class="progress" aria-label="Progress 1 out of 5 completed">
               <p>1 / 5 completed</p>
-              <svg
+
+              <div aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" aria-valuetext="20% completed">
+                <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="72"
                 height="4"
@@ -247,10 +311,12 @@
                 <rect width="72" height="4" rx="2" fill="#E3E3E3" />
                 <rect width="18" height="4" fill="#1A1A1A" />
               </svg>
+              </div>
+             
             </div>
           </div>
 
-          <button class="arrow">
+          <button class="arrow" aria-label="Expand">
             <svg
               class="arrowUp"
               xmlns="http://www.w3.org/2000/svg"
@@ -270,202 +336,225 @@
         </section>
 
         <article class="planWrapper">
-            <article class="bigWraps">
-                <section class="planContainer checked">
-                    <input type="radio" class="inputCheck" id="first" name="radio" checked >
+          <article class="bigWraps">
+            <section class="planContainer checked" role="group" aria-labelledby="firstLabel">
+              <input
+                type="radio"
+                class="inputCheck"
+                
+                id="first"
+                name="radio"
+                checked
+              />
 
-                    <div class="left">
+              <div class="left">
+                <div class="top">
+                  <div class="checkbox" aria-hidden="true">
+                    <img class="check" src="/images/check.png" alt="check" />
+                    <img
+                      class="halfCheck"
+                      aria-hidden="true"
+                      src="/images/check.png"
+                      alt="check"
+                    />
+                  </div>
 
-                        <div class="top">
-                            <div class="checkbox">
-        
-                                <img class="check" src="/images/check.png" alt="check">
-                                <img  class="halfCheck" src="/images/check.png" alt="check">
-                            </div>
-    
-                            <label for="first" class="title">Customize your online store</label>
-                        </div>
+                  <label id="firstLabel" for="first" class="title"
+                    >Customize your online store</label
+                  >
+                </div>
 
-                        <div class="details">
-                            <div class="mid">
-                              <p class="midText">
-                                choose a theme and add your logo, colors, and images to
-                                reflect your brand.
-                              </p>
-                              <button class="midBtn">Learn more</button>
-                            </div>
-            
-                            <div class="bottom">
-                              <button class="bottomBtn">Customize theme</button>
-                            </div>
-                          </div>
-                       
-                    </div>
+                <div class="details">
+                  <div class="mid">
+                    <p class="midText">
+                      choose a theme and add your logo, colors, and images to
+                      reflect your brand.
+                    </p>
+                    <button class="midBtn">Learn more</button>
+                  </div>
 
-                    <div class="imgWraps">
-                        <img src="/images/plan1.png" alt="plan-img" />
-                    </div>
-                </section>
+                  <div class="bottom">
+                    <button class="bottomBtn">Customize theme</button>
+                  </div>
+                </div>
+              </div>
 
-            </article>
+              <div class="imgWraps">
+                <img src="/images/plan1.png" alt="plan-img" />
+              </div>
+            </section>
+          </article>
 
-            <article class="bigWraps">
-                <section class="planContainer">
-                    <input type="radio" class="inputCheck" id="second" name="radio" >
+          <article class="bigWraps">
+            <section class="planContainer" role="group" aria-labelledby="firstLabel">
+              <input type="radio" class="inputCheck" id="second" name="radio" />
+              
 
-                    <div class="left">
+              <div class="left">
+                <div class="top">
+                  <div class="checkbox" aria-hidden="true">
+                    <img class="check" src="/images/check.png" alt="check" />
+                    <img
+                      class="halfCheck"
+                      aria-hidden="true"
+                      src="/images/check.png"
+                      alt="check"
+                    />
+                  </div>
 
-                        <div class="top">
-                            <div class="checkbox">
-        
-                                <img class="check" src="/images/check.png" alt="check">
-                                <img  class="halfCheck" src="/images/check.png" alt="check">
-                            </div>
-    
-                            <label for="second" class="title">Add your first product</label>
-                        </div>
+                  <label id="secondLabel" for="second" class="title"
+                    >Add your first product</label
+                  >
+                </div>
 
-                        <div class="details">
-                            <div class="mid">
-                              <p class="midText">
-                                Write a description, add photos, and set pricing for the
-                                products you plan to sell.
-                              </p>
-                              <button class="midBtn">Learn more</button>
-                            </div>
-            
-                            <div class="bottom">
-                                <button class="bottomBtn">Add Product</button>
-                                <button class="bottomBtne">Import product</button>
-                            </div>
-                          </div>
-                       
-                    </div>
+                <div class="details">
+                  <div class="mid">
+                    <p class="midText">
+                      Write a description, add photos, and set pricing for the
+                      products you plan to sell.
+                    </p>
+                    <button class="midBtn">Learn more</button>
+                  </div>
 
-                    <div class="imgWraps">
-                        <img src="/images/plan2.png" alt="plan-img" />
-                    </div>
-                </section>
+                  <div class="bottom">
+                    <button class="bottomBtn">Add Product</button>
+                    <button class="bottomBtne">Import product</button>
+                  </div>
+                </div>
+              </div>
 
-            </article>
+              <div class="imgWraps">
+                <img src="/images/plan2.png" alt="plan-img" />
+              </div>
+            </section>
+          </article>
 
-            <article class="bigWraps">
-                <section class="planContainer">
-                    <input type="radio" class="inputCheck" id="third" name="radio" >
+          <article class="bigWraps">
+            <section class="planContainer" role="group" aria-labelledby="firstLabel">
+              <input type="radio" class="inputCheck" id="third" name="radio" />
+              
 
-                    <div class="left">
+              <div class="left">
+                <div class="top">
+                  <div class="checkbox" aria-hidden="true">
+                    <img class="check" src="/images/check.png" alt="check" />
+                    <img
+                      class="halfCheck"
+                      aria-hidden="true"
+                      src="/images/check.png"
+                      alt="check"
+                    />
+                  </div>
 
-                        <div class="top">
-                            <div class="checkbox">
-        
-                                <img class="check" src="/images/check.png" alt="check">
-                                <img  class="halfCheck" src="/images/check.png" alt="check">
-                            </div>
-    
-                            <label for="third" class="title">Add a custom domain</label>
-                        </div>
+                  <label id="thirdLabel" for="third" class="title">Add a custom domain</label>
+                </div>
 
-                        <div class="details">
-                            <div class="mid">
-                              <p class="midText">
-                                Your current domain is 222219.myshopify.com but you can add
-                                a custom domain to help customers find your online store
-                              </p>
-                              <button class="midBtn">Learn more</button>
-                            </div>
-            
-                            <div class="bottom">
-                                <button class="bottomBtn">Add Domain</button>
-                            </div>
-                          </div>
-                       
-                    </div>
+                <div class="details">
+                  <div class="mid">
+                    <p class="midText">
+                      Your current domain is 222219.myshopify.com but you can
+                      add a custom domain to help customers find your online
+                      store
+                    </p>
+                    <button class="midBtn">Learn more</button>
+                  </div>
 
-                    <div class="imgWraps">
-                        <img src="/images/plan3.png" alt="plan-img" />
-                    </div>
-                </section>
+                  <div class="bottom">
+                    <button class="bottomBtn">Add Domain</button>
+                  </div>
+                </div>
+              </div>
 
-            </article>
+              <div class="imgWraps">
+                <img src="/images/plan3.png" alt="plan-img" />
+              </div>
+            </section>
+          </article>
 
-            <article class="bigWraps">
-                <section class="planContainer">
-                    <input type="radio" class="inputCheck" id="fourth" name="radio" >
+          <article class="bigWraps">
+            <section class="planContainer" role="group" aria-labelledby="firstLabel">
+              <input type="radio" class="inputCheck" id="fourth" name="radio" />
+              
 
-                    <div class="left">
+              <div class="left">
+                <div class="top">
+                  <div class="checkbox" aria-hidden="true">
+                    <img class="check" src="/images/check.png" alt="check" />
+                    <img
+                      class="halfCheck"
+                      aria-hidden="true"
+                      src="/images/check.png"
+                      alt="check"
+                    />
+                  </div>
 
-                        <div class="top">
-                            <div class="checkbox">
-        
-                                <img class="check" src="/images/check.png" alt="check">
-                                <img  class="halfCheck" src="/images/check.png" alt="check">
-                            </div>
-    
-                            <label for="fourth" class="title">Name your store</label>
-                        </div>
+                  <label id="fourthLabel" for="fourth" class="title">Name your store</label>
+                </div>
 
-                        <div class="details">
-                            <div class="mid">
-                              <p class="midText">
-                                Your temporary store name is currently Davii collections.
-                                The store name appears in your admin and your online store.
-                              </p>
-                              <button class="midBtn">Learn more</button>
-                            </div>
-            
-                            <div class="bottom">
-                                <button class="bottomBtn">Name Store</button>
-                            </div>
-                          </div>
-                       
-                    </div>
+                <div class="details">
+                  <div class="mid">
+                    <p class="midText">
+                      Your temporary store name is currently Davii collections.
+                      The store name appears in your admin and your online
+                      store.
+                    </p>
+                    <button class="midBtn">Learn more</button>
+                  </div>
 
-                    <div class="imgWraps">
-                        <img src="/images/plan4.png" alt="plan-img" />
-                    </div>
-                </section>
+                  <div class="bottom">
+                    <button class="bottomBtn">Name Store</button>
+                  </div>
+                </div>
+              </div>
 
-            </article>
+              <div class="imgWraps">
+                <img src="/images/plan4.png" alt="plan-img" />
+              </div>
+            </section>
+          </article>
 
-            <article class="bigWraps">
-                <section class="planContainer">
-                    <input type="radio" class="inputCheck" id="fifth" name="radio" >
+          <article class="bigWraps">
+            <section class="planContainer" role="group" aria-labelledby="firstLabel">
+              <input type="radio" class="inputCheck" id="fifth" name="radio" />
+              
 
-                    <div class="left">
+              <div class="left">
+                <div class="top">
+                  <div class="checkbox" aria-hidden="true">
+                    <img class="check" src="/images/check.png" alt="check" />
+                    <img
+                      class="halfCheck"
+                      aria-hidden="true"
+                      src="/images/check.png"
+                      alt="check"
+                    />
+                  </div>
 
-                        <div class="top">
-                            <div class="checkbox">
-        
-                                <img class="check" src="/images/check.png" alt="check">
-                                <img  class="halfCheck" src="/images/check.png" alt="check">
-                            </div>
-    
-                            <label for="fifth" class="title">Set up a payment provider</label>
-                        </div>
+                  <label id="fifthLabel" for="fifth" class="title"
+                    >Set up a payment provider</label
+                  >
+                </div>
 
-                        <div class="details">
-                            <div class="mid">
-                              <p class="midText">
-                                Choose a payment provider to start accepting payments.
-                                You’ll need to create an account with the payment provider
-                                and set it up with your Shopify store.
-                              </p>
-                            </div>
-                            
-                            <div class="bottom">
-                                <button class="bottomBtn">Set up payment</button>
-                            </div>
-                          </div>
-                       
-                    </div>
+                <div class="details">
+                  <div class="mid">
+                    <p class="midText">
+                      Choose a payment provider to start accepting payments.
+                      You’ll need to create an account with the payment provider
+                      and set it up with your Shopify store.
+                    </p>
+                  </div>
 
-                    <div class="imgWraps">
-                        <img src="/images/plan5.png" alt="plan-img" />
-                    </div>
-                </section>
+                  <div class="bottom">
+                    <button class="bottomBtn">Set up payment</button>
+                  </div>
+                </div>
+              </div>
 
-            </article>
-
+              <div class="imgWraps">
+                <img src="/images/plan5.png" alt="plan-img" />
+              </div>
+            </section>
+          </article>
         </article>
       </article>
     </main>
