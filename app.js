@@ -10,6 +10,8 @@ const planContainer = document.querySelectorAll(".planContainer");
 const clickTitle = document.querySelectorAll(".clickTitle");
 const userWraps = document.querySelector(".userWraps");
 const dropdown = document.querySelector(".dropdown");
+const alertIcon = document.querySelector(".notifcation");
+const alertDropdown = document.querySelector(".notify");
 
 checkbox.forEach((check) => {
   check.addEventListener("click", (e) => {
@@ -33,7 +35,17 @@ arrow.addEventListener("click", () => {
 });
 
 userWraps.addEventListener('click', ()=>{
+  if(alertDropdown.classList.contains('show')){
+    alertDropdown.classList.remove('show')
+  }
   dropdown.classList.toggle('show')
+})
+
+alertIcon.addEventListener('click', ()=>{
+  if(dropdown.classList.contains('show')){
+    dropdown.classList.remove('show')
+  }
+  alertDropdown.classList.toggle('show')
 })
 
 //   for(let i = 0; i < bigWraps.length; i++){

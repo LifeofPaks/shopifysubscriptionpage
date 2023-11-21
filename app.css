@@ -34,7 +34,7 @@ input {
 button {
   cursor: pointer;
 }
-
+/* ========================NAV SECTION============================= */
 nav {
   background: #1a1a1a;
   display: flex;
@@ -88,6 +88,12 @@ nav .action .notifcation {
   display: grid;
   place-content: center;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+nav .action .notifcation:hover,
+nav .action .notifcation:focus {
+  background: var(--grey-grey-50, #656266);
 }
 
 nav .action .userWraps {
@@ -98,6 +104,12 @@ nav .action .userWraps {
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+nav .action .userWraps:hover,
+nav .action .userWraps:focus {
+  background: var(--grey-grey-50, #656266);
 }
 
 nav .action .userWraps .user {
@@ -129,10 +141,12 @@ nav .action .userWraps .userInit {
   line-height: 130%;
 }
 
+/* ========================USER DROPDOWN SECTION============================= */
+
 .dropdown {
   position: absolute;
   right: 16px;
-  top: 74px;
+  top: 94px;
   display: flex;
   width: 320px;
   padding: 6px 0px;
@@ -145,16 +159,14 @@ nav .action .userWraps .userInit {
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
   opacity: 0;
   visibility: none;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-.dropdown.show{
+.dropdown.show {
   opacity: 1;
   visibility: visible;
   top: 64px;
 }
-
-
 
 .dropdown .ddTop {
   display: flex;
@@ -257,12 +269,10 @@ nav .action .userWraps .userInit {
   cursor: pointer;
 }
 
-
 .dropdown .list:focus {
   border-radius: 8px;
   border: 2px solid var(--states-focused, #005bd3);
 }
-
 
 .dropdown .list:hover {
   background: var(--states-hover, #f1f1f1);
@@ -300,6 +310,67 @@ nav .action .userWraps .userInit {
   cursor: pointer;
 }
 
+/* ========================NOTIFICATION DROPDOWN SECTION============================= */
+.notify {
+  display: inline-flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--stroke-s-50, #dbdbdb);
+  background: var(--White, #fff);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  right: 16px;
+  top: 74px;
+  opacity: 0;
+  visibility: none;
+  transition: 0.3s;
+}
+
+.notify.show {
+  opacity: 1;
+  visibility: visible;
+  top: 64px;
+}
+
+.notify .notTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.notify .alerts {
+  color: var(--font-dark, var(--grey-g-200, #303030));
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.notify .notText {
+  background: var(--states-hover, #f1f1f1);
+  padding: 16px;
+  color: var(--font-mid-2, #616161);
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.notify svg {
+cursor: pointer;
+}
+
+.notify svg:focus {
+  border: 1px solid #005BD3;
+}
+
+/* ============================= MAIN SECTION==================== */
 main .planTitle {
   margin-top: 32px;
   margin-bottom: 16px;
@@ -672,5 +743,12 @@ main .planTitle .selectAction .close {
 
   .planContainer input[type="radio"]:checked ~ .imgWraps {
     display: none;
+  }
+
+  .notify{
+    width: 90%;
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
