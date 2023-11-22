@@ -297,8 +297,8 @@
             <p class="text">
               Use this personalized guide to get your store up and running.
             </p>
-            <div class="progress" aria-label="Progress 1 out of 5 completed">
-              <p>0 / 5 completed</p>
+            <div class="progress"  role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" aria-labelledby="progressLabel">
+              <p class="progress-count"> <span class="count">0</span> / 5 completed</p>
 
               <div class="progress-bar">
                 <div class="checkProgress" id="progress"></div>
@@ -339,7 +339,7 @@
               <div class="left">
                 <div class="top">
                   <label for="checky1">
-                    <input type="checkbox" id="checky1" class="checkInput" name="custom-checkbox">
+                    <input type="checkbox" onchange="updateProgressBar()" id="checky1" class="checkInput" name="custom-checkbox">
                     <div class="custom-checkbox" role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="checky"></div>
                   </label>
 
@@ -377,7 +377,7 @@
               <div class="left">
                 <div class="top">
                     <label for="checky2">
-                        <input type="checkbox" id="checky2" class="checkInput" name="custom-checkbox">
+                        <input type="checkbox" onchange="updateProgressBar()" id="checky2" class="checkInput" name="custom-checkbox">
                         <div class="custom-checkbox" role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="checky"></div>
                       </label>
 
@@ -416,7 +416,7 @@
               <div class="left">
                 <div class="top">
                     <label for="checky3">
-                        <input type="checkbox" id="checky3" class="checkInput" name="custom-checkbox">
+                        <input type="checkbox" onchange="updateProgressBar()" id="checky3" class="checkInput" name="custom-checkbox">
                         <div class="custom-checkbox" role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="checky"></div>
                       </label>
 
@@ -453,7 +453,7 @@
               <div class="left">
                 <div class="top">
                     <label for="checky4">
-                        <input type="checkbox" id="checky4" class="checkInput" name="custom-checkbox">
+                        <input type="checkbox" onchange="updateProgressBar()" id="checky4" class="checkInput" name="custom-checkbox">
                         <div class="custom-checkbox" role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="checky"></div>
                       </label>
 
@@ -490,7 +490,7 @@
               <div class="left">
                 <div class="top">
                     <label for="checky5">
-                        <input  type="checkbox" id="checky5" class="checkInput" name="custom-checkbox">
+                        <input  type="checkbox" onchange="updateProgressBar()" id="checky5" class="checkInput" name="custom-checkbox">
                         <div class="custom-checkbox" role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="checky"></div>
                       </label>
 

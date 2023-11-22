@@ -496,6 +496,7 @@ main .planTitle .close {
   align-self: stretch;
 }
 
+
 .activities .arrow {
   border-radius: 6px;
   transition: 0.3s;
@@ -542,13 +543,15 @@ main .planTitle .close {
   margin-bottom: 16px;
 }
 
+/* ====================PROGRESS BAR========================== */
+
 .activities .left .progress {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.activities .left .progress p {
+ .progress .progress-count {
   color: var(--font-dark, var(--grey-g-200, #303030));
   line-height: 130%;
   font-family: Inter;
@@ -557,9 +560,20 @@ main .planTitle .close {
   font-weight: 400;
 }
 
-.activities svg {
-  cursor: pointer;
+.progress-bar{
+  width: 72px;
+  height: 4px;
+  background: #E3E3E3;
+  border-radius: 5px;
+  overflow: hidden;
 }
+
+.checkProgress{
+  height: 100%;
+  width: 0;
+  background: #000;
+}
+
 
 /* =======================PLAN SECTION======================= */
 

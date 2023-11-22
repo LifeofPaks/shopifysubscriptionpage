@@ -16,6 +16,23 @@ const left = document.querySelectorAll(".left");
 const title = document.querySelectorAll(".title");
 const details = document.querySelectorAll(".details");
 const imgWraps = document.querySelectorAll(".imgWraps");
+const checkProgress = document.querySelector(".checkProgress");
+const count = document.querySelector(".count");
+
+//================================PROGRESS BAR=====================
+
+function updateProgressBar() {
+
+  const checkedCount = Array.from(customCheck).filter(
+    (checkbox) => checkbox.checked
+  ).length;
+
+  count.innerHTML = checkedCount  
+
+  const widthPercentage = (checkedCount / customCheck.length) * 100;
+  checkProgress.style.width = `${widthPercentage}%`;
+
+}
 
 // CLOSE TITLE EVENT LISTENER
 closeTitleBtn.addEventListener("click", () => {
@@ -123,6 +140,27 @@ customCheck.forEach((item, index) => {
     for (let i = 0; i < imgWraps.length; i++) {
       if (i !== index) {
         imgWraps[i].classList.remove("show");
+      }
+    }
+  });
+});
+
+// Remove 'checked' attribute from all customCheck items
+inputCheck.forEach((inputItem, index) => {
+  inputItem.addEventListener("change", () => {
+    for (let i = 0; i < customCheck.length; i++) {
+      if (i !== index) {
+        customCheck[i].checked = false;
+      }
+    }
+  });
+});
+
+customCheck.forEach((inputItem, index) => {
+  inputItem.addEventListener("change", () => {
+    for (let i = 0; i < inputCheck.length; i++) {
+      if (i !== index) {
+        inputCheck[i].checked = false;
       }
     }
   });
