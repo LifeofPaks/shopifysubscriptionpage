@@ -134,7 +134,7 @@
     <!-- USER PROFILE DROP DOWN -->
     <article class="dropdown" aria-hidden="true">
       <section class="ddTop">
-        <section class="userProfile" tabindex="0" role="button" aria-label="User Profile Dropdown">
+        <a href="https://accounts.shopify.com/" class="userProfile" tabindex="0" role="button" aria-label="User Profile Dropdown">
           <div class="ddLeft">
             <p class="ddUserInit">DC</p>
             <p class="ddUsername">Davii Collections</p>
@@ -158,9 +158,9 @@
               />
             </svg>
           </button>
-        </section>
+        </a>
 
-        <section class="allStores" >
+        <a href="https://accounts.shopify.com/" class="allStores" >
             <button  aria-label="View all stores">
 
                 <svg
@@ -181,25 +181,25 @@
         </button>
         <p class="storeText">All stores</p>
 
-        </section>
+        </a>
       </section>
 
       <ul class="midList">
-        <li class="list"> <a href="#">Help Center</a></li>
-        <li class="list"> <a href="#">Changelog</a></li>
-        <li class="list"> <a href="#">Community forums</a></li>
-        <li class="list"> <a href="#">Hire a Shopify Partner</a></li>
-        <li class="list"> <a href="#">Keyboard shortcuts</a></li>
+        <li class="list"> <a href="https://accounts.shopify.com/">Help Center</a></li>
+        <li class="list"> <a href="https://accounts.shopify.com/">Changelog</a></li>
+        <li class="list"> <a href="https://accounts.shopify.com/">Community forums</a></li>
+        <li class="list"> <a href="https://accounts.shopify.com/">Hire a Shopify Partner</a></li>
+        <li class="list"> <a href="https://accounts.shopify.com/">Keyboard shortcuts</a></li>
       </ul>
 
-      <section class="action">
+      <a href="https://accounts.shopify.com/" class="action">
         <p class="ddName">David Micheal</p>
         <p class="email">davidmicheal@gmail.com</p>
-      </section>
+      </a>
 
       <ul class="midList">
-        <li class="list"> <a href="#">Manage account</a></li>
-      <li class="list"> <a href="#">Log out</a></li>
+        <li class="list"> <a href="https://accounts.shopify.com/">Manage account</a></li>
+      <li class="list"> <a href="https://accounts.shopify.com/">Log out</a></li>
       </ul>
       
     </article>
@@ -268,11 +268,11 @@
       <section class="planTitle">
         <div class="titleWraps">
           <p>Extend your trial for $1/month for 3 months on select plans.</p>
-          <button aria-label="Select a plan" class="selectPlanMobile">Select a plan</button>
+          <button aria-label="Select a plan" class="selectPlanMobile"><a href="https://www.shopify.com/pricing">Select a plan</a></button>
         </div>
 
         <div class="selectAction">
-          <button aria-label="Select a plan" class="selectPlan">Select a plan</button>
+          <button aria-label="Select a plan" class="selectPlan"><a href="https://www.shopify.com/pricing">Select a plan</a></button>
           <button aria-label="Select a plan" class="close">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -298,19 +298,10 @@
               Use this personalized guide to get your store up and running.
             </p>
             <div class="progress" aria-label="Progress 1 out of 5 completed">
-              <p>1 / 5 completed</p>
+              <p>0 / 5 completed</p>
 
-              <div aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" aria-valuetext="20% completed">
-                <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="72"
-                height="4"
-                viewBox="0 0 72 4"
-                fill="none"
-              >
-                <rect width="72" height="4" rx="2" fill="#E3E3E3" />
-                <rect width="18" height="4" fill="#1A1A1A" />
-              </svg>
+              <div class="progress-bar">
+                <div class="checkProgress" id="progress"></div>
               </div>
              
             </div>
@@ -337,14 +328,12 @@
 
         <article class="planWrapper">
           <article class="bigWraps">
-            <section class="planContainer checked" role="group" aria-labelledby="firstLabel">
+            <section class="planContainer" role="group" aria-labelledby="firstLabel">
               <input
                 type="radio"
                 class="inputCheck"
-                
                 id="first"
                 name="radio"
-                checked
               />
 
               <div class="left">
