@@ -385,12 +385,14 @@ nav .action .userWraps .userInit {
   line-height: 140%;
 }
 
-.notify svg {
+.notify .notBtn{
   cursor: pointer;
+  border: 1px solid transparent;
 }
 
-.notify svg:focus {
+.notify .notBtn:focus {
   border: 1px solid #005bd3;
+  border-radius: 4px;
 }
 
 /* ============================= MAIN SECTION==================== */
@@ -501,6 +503,7 @@ main .planTitle .close {
   border-radius: 6px;
   transition: 0.3s;
   padding: 4px;
+  border: 2px solid transparent;
 }
 
 .activities .arrow .arrowUp {
@@ -609,19 +612,19 @@ main .planTitle .close {
   background: #f3f3f3;
 }
 
-.planContainer .left {
+.planContainer .leftPlan {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 0;
 }
 
-.planContainer input[type="radio"]:checked + .left {
+.planContainer input[type="radio"]:checked + .leftPlan {
   gap: 16px;
 }
 
 /* show on custom checkd */
- .left.show {
+ .leftPlan.show {
   gap: 16px;
 }
 
