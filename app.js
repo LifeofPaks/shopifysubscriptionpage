@@ -62,8 +62,10 @@ alertIcon.addEventListener("click", () => {
   alertDropdown.classList.toggle("show");
 });
 
+
 //TOGGLE CHECKBOX AND TOGGLE DETAILS
 
+// ==========================INPUT CHECK ACTIONS==================
 inputCheck.forEach((item, index) => {
   item.addEventListener("change", () => {
     for (let i = 0; i < planContainer.length; i++) {
@@ -76,6 +78,64 @@ inputCheck.forEach((item, index) => {
   });
 });
 
+inputCheck.forEach((item, index) => {
+  item.addEventListener("change", () => {
+    if (item.checked || !item.checked) {
+      title[index].classList.add("show");
+    }
+
+    for (let i = 0; i < title.length; i++) {
+      if (i !== index) {
+        title[i].classList.remove("show");
+      }
+    }
+  });
+});
+
+inputCheck.forEach((item, index) => {
+  item.addEventListener("change", () => {
+    if (item.checked || !item.checked) {
+      details[index].classList.add("show");
+    }
+
+    for (let i = 0; i < details.length; i++) {
+      if (i !== index) {
+        details[i].classList.remove("show");
+      }
+    }
+  });
+});
+
+inputCheck.forEach((item, index) => {
+  item.addEventListener("change", () => {
+    if (item.checked || !item.checked) {
+      left[index].classList.add("show");
+    }
+
+    for (let i = 0; i < left.length; i++) {
+      if (i !== index) {
+        left[i].classList.remove("show");
+      }
+    }
+  });
+});
+
+inputCheck.forEach((item, index) => {
+  item.addEventListener("change", () => {
+    if (item.checked || !item.checked) {
+      imgWraps[index].classList.add("show");
+    }
+
+    for (let i = 0; i < imgWraps.length; i++) {
+      if (i !== index) {
+        imgWraps[i].classList.remove("show");
+      }
+    }
+  });
+});
+
+
+// ==========================CUSTOM CHECK ACTIONS==================
 customCheck.forEach((item, index) => {
   item.addEventListener("change", () => {
     if (item.checked || !item.checked) {
@@ -145,17 +205,8 @@ customCheck.forEach((item, index) => {
   });
 });
 
-// Remove 'checked' attribute from all customCheck items
-inputCheck.forEach((inputItem, index) => {
-  inputItem.addEventListener("change", () => {
-    for (let i = 0; i < customCheck.length; i++) {
-      if (i !== index) {
-        customCheck[i].checked = false;
-      }
-    }
-  });
-});
 
+// ==================DEACTIVE INPUT CHECK===================
 customCheck.forEach((inputItem, index) => {
   inputItem.addEventListener("change", () => {
     for (let i = 0; i < inputCheck.length; i++) {
